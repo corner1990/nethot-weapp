@@ -1,8 +1,8 @@
 export default {
   pages: [
     'pages/found/index',
-    'pages/index/index',
-    'pages/my/index'
+    'pages/my/index',
+    'pages/index/index'
   ],
   window: {
     navigationStyle: 'custom',
