@@ -1,0 +1,23 @@
+.new-item{
+  width: calc(100vw / 2 - 20px);
+  padding-bottom: 20px;
+  box-shadow: 0 10px 10px #ddd;
+  text-align: center;
+  .new-img{
+    width:  80%;
+    height: 320px;
+    transform: translateY(-12%);
+  }
+  .new-item-text{
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      border-radius: 11px;
+      background-color: #888;
+      transform: translate(-12px, -6px);
+
+    }
+  }
+}

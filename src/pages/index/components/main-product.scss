@@ -1,0 +1,59 @@
+.mian-product{
+  margin: 15px;
+  position: relative;
+  background: url('https://mmbiz.qpic.cn/mmbiz_jpg/7Jn3GYPMVgAiaZ6DEdpTeK2gjI4j5GouibzkHwEBwvQeqjs2v4vc3Ib1iapwuP4oA7S4bLo6llWOgXyz7PSAj1Qow/?wx_fmt=jpeg') 50% 50% no-repeat;
+  background-size:cover;
+  height: 940px;
+  box-shadow: 0 20px 30px #ddd;
+  &::after{
+    content: "";
+    display: inline-block;
+    height: 940px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgba($color: #fff, $alpha: 0.45);
+  }
+  .product-img-warp{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -74%);
+    z-index: 2;
+    width: calc(100% - 180px);
+    height: calc(100% - 400px);
+    
+  }
+  .product-img{
+    width:  100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .product-info-wrap{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 3;
+    
+    width: calc(100% - 180px);
+    transform: translate(-50%);
+    color: #47aeb9;
+  }
+  .product-info{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .product-time{
+    text-align: right;
+  }
+  .buy-now{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #47aeb9;
+    height: 92px;
+    border-radius: 46px;
+    margin-top: 40px;
+  }
+}
