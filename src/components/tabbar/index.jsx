@@ -24,8 +24,8 @@ export default class Index extends Component {
   handleClick =  (value) => {
     
     let paths = [
-      '/pages/found/index',
       '/pages/index/index',
+      '/pages/found/index',
       '/pages/my/index'
     ]
     let path = paths[value]
