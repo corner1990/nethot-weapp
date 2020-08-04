@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
-
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import "taro-ui/dist/style/components/nav-bar.scss";
-import "taro-ui/dist/style/components/icon.scss";
+import Taro from '@tarojs/taro'
+// import { AtButton } from 'taro-ui'
 import './main-product.scss'
 
 export default class Index extends Component {
@@ -20,16 +17,19 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
+  viewDetail() {
+    Taro.navigateTo({ url: '/pages/list/index'})
+  }
 
   render () {
     let { src } = this.state
+    let { viewDetail } = this
     return (
-      <View className='mian-product'>
-        {/* <Text>main product</Text> */}
+      <View className='mian-product' onClick={viewDetail}>
         <View className='product-img-warp'>
-          <Image src={ src } alt="img" srcset="" className='product-img' />
+          <Image src={src} alt='img' srcset='' className='product-img' />
         </View>
-        <View className='product-info-wrap'>
+        <View className='product-info-wrap' >
           <View className='product-info'>
             <View className='product-title'>
               <View>

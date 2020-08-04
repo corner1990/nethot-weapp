@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import "taro-ui/dist/style/components/nav-bar.scss";
-import "taro-ui/dist/style/components/icon.scss";
-import { View, Text } from '@tarojs/components'
+// import "taro-ui/dist/style/components/icon.scss";
+import { View, Text, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
+import "taro-ui/dist/style/components/button.scss"
 import CustomNavBar from '../../components/navbar'
 import Tabbar from '../../components/tabbar'
 import HomePageComponents from './homePageComponents'
@@ -22,12 +21,26 @@ export default class Index extends Component {
   componentDidHide () { }
 
   render () {
+    let src = 'https://ipxcdn.jfshare.com/ipxmall/avatar/1124addfcd0cec4ae8db434154d8162a.jpg'
     return (
-      <View className='index'>
+      <View className='my'>
         <CustomNavBar title='我的' />
          <View className='header'>
-            <View>Hi</View>
-            <View>远</View>
+            <View className='header-text'>
+              <Text>Hi</Text>
+              <View>
+                彭于晏
+              </View>
+            </View>
+            <View>
+              {/* <AtAvatar
+                circle
+                image={src}
+                size='large'
+                className='avatar'
+              ></AtAvatar> */}
+              <Image src={src} className='avatar' />
+            </View>
          </View>
          <View>
         <View className='me'>

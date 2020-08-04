@@ -1,0 +1,14 @@
+.img-view{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .img-material{
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+}

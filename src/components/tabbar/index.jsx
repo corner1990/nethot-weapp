@@ -21,21 +21,7 @@ export default class Index extends Component {
       ]
     }
   }
-  handleClick =  (value) => {
-    
-    let paths = [
-      '/pages/index/index',
-      '/pages/found/index',
-      '/pages/my/index'
-    ]
-    let path = paths[value]
-    console.log('value', path)
-    this.setState({
-      current: value
-    })
-
-    Taro.navigateTo({ url: path})
-  }
+  
   componentWillMount () { 
   }
 
@@ -46,7 +32,20 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
-  
+  handleClick =  (value) => {
+    
+    let paths = [
+      '/pages/index/index',
+      '/pages/found/index',
+      '/pages/my/index'
+    ]
+    let path = paths[value]
+    this.setState({
+      current: value
+    })
+
+    Taro.navigateTo({ url: path})
+  }
   render () {
     let { tabList } = this.state
     return (

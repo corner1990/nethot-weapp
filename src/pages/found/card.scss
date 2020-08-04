@@ -1,0 +1,67 @@
+.found-card{
+  margin: 20px 0 44px 0;
+  padding: 0 15px;
+  // border: 1px #eee solid;
+  height: 460px;
+  background-size: 100%;
+  .careHeaderCon {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transform: translateY(-50%);
+    width: calc(100% - 30px);
+    height: 200px;
+    
+    
+    .careHeaderConL {
+      width: 540px;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      box-shadow: 0 10px 10px #ddd;
+  
+      .research {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        .researchItem1 {
+          width: 85%;
+          letter-spacing: 5px;
+          color: #666;
+          position: relative;
+          &::after{
+            content: "";
+            display: inline-block;
+            border-bottom: 2px red solid;
+            width: 110px;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            height: 1px;
+          }
+        }
+        .researchItem2 {
+          width: 100px;
+        }
+        .play {
+          margin-left: 20px;
+        }
+      }
+      .title{
+        color: #999;
+      }
+    }
+    .careHeaderConR {
+      padding: 0 12px;
+      transform: translate(-14px,-12px);
+      color: #999;
+      font-size: 24px;
+    }
+  }
+  .found-img{
+    width: calc(100% - 30px);
+    height: 360px;
+    object-fit: cover;
+  }
+  
+}

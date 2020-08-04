@@ -1,3 +1,5 @@
+import TerserPlugin from "terser-webpack-plugin"
+
 const config = {
   projectName: 'self-miniprogram',
   date: '2020-8-1',
@@ -40,7 +42,22 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    webpackChain(chain) {
+  　　chain.mode("production");
+  　　chain.optimization.minimize(true);
+  　　chain.plugin("terser").use(TerserPlugin, [
+    　　{
+      　　cache: true,
+      　　 extractComments: false,
+      　　terserOptions: {
+        　　output: {
+          　　comments: false
+        　　}
+      　　}
+    　　}
+  　　])
+　　}
   },
   h5: {
     publicPath: '/',

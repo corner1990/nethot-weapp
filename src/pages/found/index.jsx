@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-
+import { View } from '@tarojs/components'
 import Tabbar from '../../components/tabbar'
+import CustomNavBar from '../../components/navbar'
 import SearchBar from './searchBar'
 import Card from './card'
-
-import "taro-ui/dist/style/components/button.scss" // 按需引入
 import './index.scss'
-import "taro-ui/dist/style/components/nav-bar.scss";
-import "taro-ui/dist/style/components/icon.scss";
 
 export default class Index extends Component {
 
@@ -50,7 +46,8 @@ export default class Index extends Component {
 },];
     return (
       <View className='index'>
-        <SearchBar />
+        <CustomNavBar title='发现' />
+        <SearchBar className='found-search' />
         {
           data.map((item, index)=> 
           ( <Card key={index} data={item} />) 

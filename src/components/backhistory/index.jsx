@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from '@tarojs/components'
+import Taro from '@tarojs/taro'
+import { View } from '@tarojs/components'
 import './index.scss'
 
 export default class Index extends Component {
   state = {
-    src: 'https://taro-ui.aotu.io/img/logo-taro.png',
     navigationBarHeight: 40
   }
   componentWillMount () { 
@@ -37,19 +37,20 @@ export default class Index extends Component {
       navigationBarHeight
     })
   }
+  clickLeft() {
+    Taro.navigateBack()
+  }
+  clickRight() {}
   render () {
     let {
-      src,
       navigationBarHeight
     } = this.state
-    let { title } = this.props
     const { statusBarHeight } = wx.getSystemInfoSync()
     return (
-      <View className='custom-navbar-wrap'>
+      <View className='custom-backhistory-wrap'>
         <View className='white-swpace' style={{height: statusBarHeight}}></View>
-        <View className='custom-navbar' style={{ height: navigationBarHeight }}>
-          <Text>{title}</Text>
-          <Image src={ src } alt='logo' srcset='' className='login-img' />
+        <View className='backhistory' style={{ height: navigationBarHeight }}>
+          { this.props.children }
         </View>
       </View>
     )

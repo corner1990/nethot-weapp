@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { View } from '@tarojs/components'
+// import { AtButton } from 'taro-ui'
 
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import "taro-ui/dist/style/components/nav-bar.scss";
-import "taro-ui/dist/style/components/icon.scss";
+// import "taro-ui/dist/style/components/button.scss" // 按需引入
+// import "taro-ui/dist/style/components/nav-bar.scss";
+// import "taro-ui/dist/style/components/icon.scss";
 import './news-warp.scss'
 import NewItem from './new-item'
 
