@@ -1,0 +1,45 @@
+page{
+    background-color: #f6f6f6;
+}
+.at-row{
+    background-color: #fff;
+    text-align: center;
+    .at-col{
+        height: 60px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+}
+.list-item{
+    margin: 20px 4%;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    .list-img{
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+    .list-title{
+        margin-top: 20px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .list-time{
+        font-size: 26px;
+        color: #666;
+        margin: 20px 0;
+    }
+    .share-btn{
+        float: right;
+        display: inline-block;
+        padding: 10px 40px;
+        border-radius: 30px;
+        color:#fff;
+        font-size: 28px;
+        background-color: #58aab3;
+    }
+}

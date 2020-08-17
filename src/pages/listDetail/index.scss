@@ -1,0 +1,53 @@
+.banner-img{
+    width: 100%;
+    height: 250px;
+}
+.detail-text-wrap{
+    margin: 20px 4%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.detail-content{
+    font-size: 26px;
+    margin-top: 10px;
+}
+.common-title{
+    vertical-align: middle;
+    margin: 40px 4%;
+    &:before{
+       display: inline-block;
+       content:"";
+       width: 8px;
+       height: 42px;
+       background: red; 
+       float: left;
+       margin-right: 10px;
+    }
+}
+
+.list-item{
+    margin: 0 4% 30px;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+    .list-img{
+        float: left;
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+    .list-title{
+        margin-top: 20px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .list-price{
+        font-size: 26px;
+        color: #666;
+        margin: 20px 0;
+    }
+
+}
