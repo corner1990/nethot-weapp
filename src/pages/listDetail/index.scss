@@ -25,7 +25,9 @@
        margin-right: 10px;
     }
 }
-
+.product-wrap{
+    margin-bottom: 120px;
+}
 .list-item{
     margin: 0 4% 30px;
     height: 200px;
@@ -49,5 +51,23 @@
         color: #666;
         margin: 20px 0;
     }
+    .list-my-price{
+        font-size: 26px;
+        color: rgb(209, 0, 0);
+        margin: 20px 0;
 
+    }
+
+}
+
+.share-btn{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: #15a7b7;
+    
 }

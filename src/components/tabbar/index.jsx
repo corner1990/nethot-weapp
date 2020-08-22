@@ -16,7 +16,7 @@ export default class Index extends Component {
       current: index,
       tabList: [
         { title: '首页', iconType: 'home'},
-        { title: '发现', iconType: 'eye' },
+        // { title: '发现', iconType: 'eye' },
         { title: '我的', iconType: 'user', text: '100', max: 99 }
       ]
     }
@@ -35,8 +35,8 @@ export default class Index extends Component {
   handleClick =  (value) => {
     
     let paths = [
-      '/pages/index/index',
-      '/pages/found/index',
+      '/pages/indexList/index',
+      // '/pages/found/index',
       '/pages/my/index'
     ]
     let path = paths[value]

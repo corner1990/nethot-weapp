@@ -70,6 +70,18 @@ export default class Index extends Component {
 		this.countDown();
 	};
 
+	accLogin = ()=>{
+		Taro.navigateTo({
+			url: '/pages/indexList/index',
+			events: {
+
+			},
+			success: function (res) {
+
+			}
+		  })
+	}
+
 	render() {
 		return (
 			<View className='login-wrap'>
@@ -80,7 +92,7 @@ export default class Index extends Component {
 				<View className={`login-content ${this.state.tabStatus == 1 ? 'active' : ''}`} >
 					<View className={`wx-login-btn`}>一键登录</View>
 				</View>
-				<View className={`login-content ${this.state.tabStatus == 2 ? 'active' : ''}`} >
+				<View className={`login-content acc-content ${this.state.tabStatus == 2 ? 'active' : ''}`} >
 					<AtInput
 						name='value'
 						title='账号'
@@ -88,6 +100,7 @@ export default class Index extends Component {
 						placeholder='账号'
 						value={this.state.value}
 						onChange={this.handleChange.bind(this)}
+						className='login-input acc-input'
 					/>
 					<AtInput
 						clear
@@ -97,6 +110,7 @@ export default class Index extends Component {
 						placeholder='验证码'
 						value={this.state.value}
 						onChange={this.handleCodeChange.bind(this)}
+						className='login-input'
 					>
 						<View className='get-code-btn' onClick={() => { this.handleCodeClick() }}>
 							{
@@ -106,7 +120,7 @@ export default class Index extends Component {
 							}
 						</View>
 					</AtInput>
-					<View className='phone-login-btn'>登录</View>
+					<View className='phone-login-btn' onClick={()=>{this.accLogin()}}>登录</View>
 				</View>
 
 
