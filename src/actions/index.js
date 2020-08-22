@@ -18,7 +18,7 @@ export const minus = () => {
  * @desc 异步
  */
 export const asyncAdd = () => {
-  return dispatch => {
+  return async dispatch => {
     setTimeout(() => {
       dispatch(add())
     }, 2000)

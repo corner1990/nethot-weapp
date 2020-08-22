@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
-import { AtTabBar, AtInput, AtForm } from 'taro-ui'
+import { AtTabBar, AtInput, AtForm, AtButton  } from 'taro-ui'
 import "taro-ui/dist/style/components/input.scss";
 import "taro-ui/dist/style/components/icon.scss";
 import './login-wrap.scss'
 
+import {loginWX} from '../api'
 
 export default class Index extends Component {
 	state = {
@@ -14,10 +15,13 @@ export default class Index extends Component {
 		value: "",
 		count: 60,
 		codeFlag: true,
+		code:''
 	}
 	componentWillMount() { }
 
-	componentDidMount() { }
+	componentDidMount() { 
+
+	}
 
 	componentWillUnmount() { }
 
@@ -82,6 +86,36 @@ export default class Index extends Component {
 		  })
 	}
 
+	getPhoneNumber = data =>{
+		console.log(data)
+		if(data.detail.errMsg != "getPhoneNumber:ok"){
+			return false
+		}
+		wx.login({
+			success: async (res) => {
+			console.log(res)
+			  if (res.code) {
+				let loginData = await loginWX({...data.detail,code:res.code})
+				if(loginData.errCode == 0){
+					Taro.navigateTo({
+						url: '/pages/indexList/index',
+						events: {
+			
+						},
+						success: function (res) {
+			
+						}
+					  })
+				}
+				
+			  } else {
+				console.log('登录失败！' + res.errMsg)
+			  }
+			}
+		  })
+		
+	}
+
 	render() {
 		return (
 			<View className='login-wrap'>
@@ -90,7 +124,7 @@ export default class Index extends Component {
 					<View className={`tab-item ${this.state.tabStatus == 2 ? 'active' : ''}`} onClick={() => { this.handleClick(2) }}>手机号登录</View>
 				</View>
 				<View className={`login-content ${this.state.tabStatus == 1 ? 'active' : ''}`} >
-					<View className={`wx-login-btn`}>一键登录</View>
+					<AtButton className={`wx-login-btn`} openType="getPhoneNumber" onGetPhoneNumber={this.getPhoneNumber.bind(this)}>一键登录</AtButton>
 				</View>
 				<View className={`login-content acc-content ${this.state.tabStatus == 2 ? 'active' : ''}`} >
 					<AtInput
