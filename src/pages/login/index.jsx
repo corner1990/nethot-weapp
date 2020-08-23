@@ -21,7 +21,7 @@ class Index extends Component {
 
     render () {
       let title = '登录'
-      console.log('login', this)
+      console.log('login', this.props)
       return (
         <View className='index'>
             <View>

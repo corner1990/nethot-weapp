@@ -1,6 +1,8 @@
 import {
   ADD,
-  MINUS
+  MINUS,
+  SHOWCODE,
+  HIDECODE
 } from '../types'
 
 export const add = () => {
@@ -12,6 +14,18 @@ export const add = () => {
 export const minus = () => {
   return {
     type: MINUS
+  }
+}
+
+export const showCode = () => {
+  return {
+    type: SHOWCODE
+  }
+}
+
+export const hideCode = () => {
+  return {
+    type: HIDECODE
   }
 }
 /**

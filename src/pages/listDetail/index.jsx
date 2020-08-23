@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import { AtIcon, AtNavBar } from 'taro-ui'
 import Backhistory from '../../components/backhistory'
 import './index.scss'
 
@@ -28,10 +29,10 @@ export default class Index extends Component {
                     <AtNavBar
                         className='list-navbar'
                         onClickLeftIcon={this.handleClick}
-                        // color='#fff'
+                        // color='#666'
+                        leftText='返回'
                         leftIconType='chevron-left'
                     />
-                    {/* <AtIcon value='chevron-left' size='30' color='#F00'></AtIcon> */}
                 </Backhistory>
                 <View className='banner-wrap'>
                     <Image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2362552488,2333267977&fm=26&gp=0.jpg' className='banner-img'></Image>
@@ -70,7 +71,7 @@ export default class Index extends Component {
                         <View className='list-my-price'>立&emsp;赚：￥99.99</View>
                     </View>
                 </View>
-                <View className='share-btn'>立即推广</View>
+                <View className='share-btn' >立即推广</View>
             </View>
         )
     }

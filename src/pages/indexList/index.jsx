@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { View, Swiper, SwiperItem, Image } from '@tarojs/components'
+import { connect } from 'react-redux'
 import CustomNavBar from '../../components/navbar'
+import CodeDialog from '../../components/codeDialog'
 import Tabbar from '../../components/tabbar'
 import ContentList from './components/contentList'
 import './index.scss'
@@ -23,6 +25,7 @@ export default class Index extends Component {
         return (
             <View className='index'>
                 <CustomNavBar title={title} />  
+                <CodeDialog />  
                 <Swiper
                     className='test-h'
                     indicatorColor='#fff'
