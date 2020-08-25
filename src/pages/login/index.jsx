@@ -24,13 +24,13 @@ class Index extends Component {
       console.log('login', this.props)
       return (
         <View className='index'>
-            <View>
+            {/* <View>
             <View>{this.props.num}</View>
             <View onClick={() => this.props.add()}>add</View>
             <View onClick={() => this.props.minus()}>Minus</View>
             <View onClick={() => this.props.asyncAdd()}>asyncAdd</View>
             <View onClick={() => this.props.asyncMinus()}>asyncMinus</View>
-            </View>
+            </View> */}
             <LoginWrap />
         </View>
       )

@@ -36,7 +36,7 @@ export default class Index extends Component {
                     autoplay>
                     {
                         imgData.map((item,index)=>
-                        (<SwiperItem>
+                        (<SwiperItem key={index}>
                             <Image src={item} alt='banner' srcset='' className='banner-img' />
                         </SwiperItem>)
                         )

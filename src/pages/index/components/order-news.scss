@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: center;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     transition: all 2.5s ease-in-out;
   }
