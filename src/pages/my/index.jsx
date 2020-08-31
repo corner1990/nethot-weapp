@@ -55,8 +55,8 @@ export default class Index extends Component {
           </View>
         </View>
          </View>
-         <HomePageComponents icon1='calendar' icon2='alert-circle' title1='推广的直播间' title2='我的评论' />
-         <HomePageComponents icon1='iphone' icon2='message' title1='APP账号同步' title2='意见反馈'/>
+         <HomePageComponents icon1='calendar' icon2='alert-circle' title1='推广的直播间' title2='全部订单明细' />
+         <HomePageComponents icon1='iphone' icon2='message' title1='APP账号同步' title2='邀请新人'/>
         <Tabbar index={2} />
       </View>
     )

@@ -21,7 +21,26 @@ class Index extends Component {
           title: '时尚奢侈大众女鞋',
           time: '2020-05-05 09：00-12：00'
         }
-      ]
+      ],
+      sort:[
+        {
+          key:1,
+          name:'全部'
+        },
+        {
+          key:2,
+          name:'人气'
+        },
+        {
+          key:3,
+          name:'时间'
+        },
+        {
+          key:4,
+          name:'高回报'
+        },
+      ],
+      defaultSort:1
     }
     componentWillMount() { }
 
@@ -51,23 +70,28 @@ class Index extends Component {
       this.props.showCode()
     }
 
+    clickSort = key =>{
+      this.setState({defaultSort:key})
+    }
+
+
     render() {
-        let { list } = this.state
+        let { list, sort, defaultSort } = this.state
         return (
             <View className='index'>
                 <View className='at-row'>
-                    <View className='at-col'>全部</View>
-                    <View className='at-col'>人气</View>
-                    <View className='at-col'>时间</View>
-                    <View className='at-col'>高回报</View>
+                  {sort.map((item,key)=>{
+                    return(
+                      <View className={`at-col ${defaultSort==item.key ? 'active':'' }`} key={key} onClick={()=>{this.clickSort(item.key)}}>{item.name}</View>
+                    )
+                  })}
                 </View>
                 {
                   list.map((item, key) => {
                     return (
                       <View className='list-item' key={key} onClick={this.toDetail}>
-                        <Image
-                        
-                            className='list-img' 
+                          <Image
+                            className='list-img'
                             src={item.imgSrc}
                         ></Image>
                         <View className='list-title'>{item.title}</View>
@@ -77,7 +101,7 @@ class Index extends Component {
                     )
                   })
                 }
-                
+
             </View>
         )
     }

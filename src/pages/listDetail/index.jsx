@@ -49,7 +49,7 @@ export default class Index extends Component {
                     <View className='list-item'>
                         <Image className='list-img' src={'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3793539474,3893904211&fm=26&gp=0.jpg'}></Image>
                         <View className='list-title'>时尚奢侈大众女鞋</View>
-                        <View className='list-price'>直播价：￥99.99</View>
+                        <View className='list-price'>订单号：￥99.99</View>
                         <View className='list-my-price '>立&emsp;赚：￥99.99</View>
                     </View>
                     <View className='list-item'>
